@@ -9,10 +9,24 @@
 
 // Car object oluşturdum, ve property'lere değerler atadım. 1 adet method tanımladım.
 
-import Car from "./Car.js";
+import Car from "./car.js";
 
 const newCar = new Car("bmw", "red", 2022, 12000, 17, 4, "michelin", "open");
 
 console.log("The newCar object:", newCar);
-newCar.changeBrand("volvo");
-console.log(newCar.brand);
+
+newCar.changeBrand("Range");
+console.log("The newCar brand:", newCar.brand);
+
+const yunusCar = new Car(
+  "volvo",
+  "red",
+  2016,
+  50000,
+  17,
+  4,
+  "michelin",
+  "closed"
+);
+
+console.log(yunusCar);
