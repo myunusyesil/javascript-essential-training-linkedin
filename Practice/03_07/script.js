@@ -8,6 +8,8 @@
  * - Test your objects in the browser console by accessing the entire object and its specific properties.
  */
 
+// Car object oluşturdum, ve property'lere değerler atadım. 1 adet method tanımladım.
+
 const car = {
   brand: "audi",
   color: "white",
