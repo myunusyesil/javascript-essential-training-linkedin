@@ -146,3 +146,24 @@ figure {
   background: black;
   color: white;
 }
+.nav-bar {
+  display: flex;
+  margin: 32px auto;
+}
+
+.nav-bar ul{
+  display: flex;
+  align-items: center;
+  padding: 0!important;
+}
+
+.nav-bar ul li {
+  list-style: none;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  text-decoration-style: none;
+  margin: auto 16px;
+  color: black;
+}
