@@ -148,7 +148,7 @@ figure {
 }
 .nav-bar {
   display: flex;
-  margin: 32px auto;
+  margin: 8px auto;
 }
 
 .nav-bar ul{
@@ -162,8 +162,7 @@ figure {
 }
 
 .nav-bar ul li a {
-  text-decoration: none;
-  text-decoration-style: none;
+  text-decoration: underline;
   margin: auto 16px;
   color: black;
 }

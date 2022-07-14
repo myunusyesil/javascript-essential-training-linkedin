@@ -19,4 +19,4 @@ const content = `<div>
 let navBar = document.createElement("nav");
 navBar.classList.add("nav-bar");
 navBar.innerHTML = content;
-header.prepend(navBar);
+header.append(navBar);
