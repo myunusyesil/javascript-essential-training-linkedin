@@ -9,32 +9,6 @@ import Backpack from "./components/Backpack.js";
 
 import backpackObjectArray from "./components/data.js";
 
-const advancedFunction = function () {
-  backpackObjectArray.forEach((element) => {
-    const newArticle = document.createElement("article");
-    newArticle.classList.add("backpack");
-    newArticle.setAttribute("ID", element.id);
-    newArticle.innerHTML = createContent(element);
-    console.log(newArticle);
-    const main = document.querySelector(".maincontent");
-    main.append(newArticle);
-    // return newArticle;
-  });
-};
-
-// const everydayPack = new Backpack(
-//   "pack01",
-//   "Everyday Backpack",
-//   30,
-//   "grey",
-//   15,
-//   26,
-//   26,
-//   false,
-//   "December 5, 2018 15:00:00 PST",
-//   "../assets/images/everyday.svg"
-// );
-
 const createContent = function (objName) {
   const content = `
     <figure class="backpack__image">
@@ -66,11 +40,40 @@ const createContent = function (objName) {
   // console.log(content);
   return content;
 };
-// const main = document.querySelector(".maincontent");
+
+const articleArr = backpackObjectArray.map((element) => {
+  const newArticle = document.createElement("article");
+  newArticle.classList.add("backpack");
+  newArticle.setAttribute("ID", element.id);
+  newArticle.innerHTML = createContent(element);
+  // console.log(newArticle);
+  return newArticle;
+  // const main = document.querySelector(".maincontent");
+  // main.append(newArticle);
+  // return newArticle;
+});
+console.log(articleArr);
+
+// const everydayPack = new Backpack(
+//   "pack01",
+//   "Everyday Backpack",
+//   30,
+//   "grey",
+//   15,
+//   26,
+//   26,
+//   false,
+//   "December 5, 2018 15:00:00 PST",
+//   "../assets/images/everyday.svg"
+// );
+
+const main = document.querySelector(".maincontent");
 
 // const newArticle = document.createElement("article");
 // newArticle.classList.add("backpack");
 // newArticle.setAttribute("id", "everyday");
 // newArticle.innerHTML = content;
 
-advancedFunction();
+articleArr.forEach((element) => {
+  main.append(element);
+});
