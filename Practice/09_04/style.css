@@ -20,5 +20,18 @@ body {
   display: block;
   width: 6rem;
   height: 6rem;
-  background-color: hsl(0, 0%, 90%);
+  background-color: #e6e6e6;
+}
+
+.grid-border {
+  border: 2px solid darkgrey;
+}
+
+
+.grid-selected {
+  border: 2px solid red;
+}
+
+.background-toggle {
+  background-color: black;
 }
